@@ -61,7 +61,11 @@ namespace metodenumericePuteri
 
         public void drawcerc(ref Graphics rg, float x, float y, float r)
         {
-            rg.DrawEllipse(p, x, y, r, r);
+            try
+            {
+                rg.DrawEllipse(p, x, y, r, r);
+            }
+            catch { }
         }
         public void findalldatas(int a, int b , float p, ref TextBox t )
         {
@@ -85,7 +89,14 @@ namespace metodenumericePuteri
         {
             for (int i = 0; i < ld.Count; i++)
             {
-                drawcerc(ref rg, i * 5 + 5, double2float(ld[i])/2, 2);
+                drawcerc(ref rg, i * 2 + 2, double2float(ld[i])/2, 2);
+            }
+        }
+        public void plot1Doubles2graphics(ref List<double> ld, ref Graphics rg)
+        {
+            for (int i = 0; i < ld.Count; i++)
+            {
+                drawcerc(ref rg, i * 2 + 2, double2float((1/(ld[i]/2))*20000), 2);
             }
         }
         private void Form1_Load(object sender, EventArgs e)
@@ -103,13 +114,11 @@ namespace metodenumericePuteri
         private void button2_Click(object sender, EventArgs e)
         {
 
-            findalldatas(-20, 20, 2, ref this.textBox4);
-            findalldatas(-20, 20, 3, ref this.textBox4);
-            findalldatas(-20, 20, 4, ref this.textBox4);
-            findalldatas(-20, 20, 5, ref this.textBox4);
-            findalldatas(-20, 20, 6, ref this.textBox4);
+            findalldatas(-50, 50, 2, ref this.textBox4);
+            
 
             plotDoubles2graphics(ref listofvalues, ref g);
+            plot1Doubles2graphics(ref listofvalues, ref g);
         }
     }
 }
