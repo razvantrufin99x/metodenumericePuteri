@@ -75,7 +75,7 @@
             // 
             this.panel1.Location = new System.Drawing.Point(570, 13);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(578, 344);
+            this.panel1.Size = new System.Drawing.Size(800, 523);
             this.panel1.TabIndex = 4;
             // 
             // textBox4
@@ -100,7 +100,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1178, 548);
+            this.ClientSize = new System.Drawing.Size(1398, 548);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.panel1);

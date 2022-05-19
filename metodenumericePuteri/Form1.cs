@@ -85,7 +85,7 @@ namespace metodenumericePuteri
         {
             for (int i = 0; i < ld.Count; i++)
             {
-                drawcerc(ref rg, i * 10 + 20, double2float(ld[i]), 10);
+                drawcerc(ref rg, i * 5 + 5, double2float(ld[i])/2, 2);
             }
         }
         private void Form1_Load(object sender, EventArgs e)
@@ -102,7 +102,13 @@ namespace metodenumericePuteri
 
         private void button2_Click(object sender, EventArgs e)
         {
-            findalldatas(1, 50, 2, ref this.textBox4);
+
+            findalldatas(-20, 20, 2, ref this.textBox4);
+            findalldatas(-20, 20, 3, ref this.textBox4);
+            findalldatas(-20, 20, 4, ref this.textBox4);
+            findalldatas(-20, 20, 5, ref this.textBox4);
+            findalldatas(-20, 20, 6, ref this.textBox4);
+
             plotDoubles2graphics(ref listofvalues, ref g);
         }
     }
